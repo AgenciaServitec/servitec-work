@@ -15,7 +15,6 @@ export const Router = () => {
           </BaseLayout>
         }
       />
-      <Route path="/" />
       <Route path="*" element={<h1>TU PÁGINA NO EXISTE CTM</h1>} />
     </Routes>
   );
