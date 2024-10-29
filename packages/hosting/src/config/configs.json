@@ -6,12 +6,8 @@
         "sales": "practicesystem@gmail.com"
       },
       "numbers": {
-        "phone": [
-          "123 456 789"
-        ],
-        "wsp": [
-          "123 456 789"
-        ]
+        "phone": ["123 456 789"],
+        "wsp": ["123 456 789"]
       },
       "socialLinks": {
         "facebook": "#",
