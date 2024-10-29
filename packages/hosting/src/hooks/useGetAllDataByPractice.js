@@ -21,16 +21,16 @@ export const useGetAllDataByPractice = (practice) => {
   }, [practice]);
 
   const company = companies.find(
-    (company) => company.id === practice.companyId
+    (company) => company.id === practice.companyId,
   );
   const practitioner = users.find(
-    (user) => user?.id === practice?.practitionerId
+    (user) => user?.id === practice?.practitionerId,
   );
   const representativeCompany = users.find(
-    (user) => user?.id === company?.representativeId
+    (user) => user?.id === company?.representativeId,
   );
   const supervisor = users.find(
-    (user) => user?.id === practice?.academicSupervisorId
+    (user) => user?.id === practice?.academicSupervisorId,
   );
 
   return {
