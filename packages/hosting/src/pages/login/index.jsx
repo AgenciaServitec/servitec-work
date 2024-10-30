@@ -3,7 +3,7 @@ import React from "react";
 export const LoginIntegration = () => {
   return (
     <div>
-      <h1>Buenas noches, y Hola mi amigo</h1>
+      <h1>BUENOS DIAS COMO HAS ESTADO HOY</h1>
     </div>
   );
 };
