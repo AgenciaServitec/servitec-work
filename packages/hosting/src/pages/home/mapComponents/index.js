@@ -1,1 +1,1 @@
-export {Map} from "./Map.jsx"
+export { Map } from "./Map.jsx";

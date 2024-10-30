@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import { BaseLayout } from "../components/layouts/BaseLayout.jsx";
-import {LoginIntegration, HomeMap} from "../pages/index.js";
+import { LoginIntegration, HomeMap } from "../pages/index.js";
 
 export const Router = () => {
   return (
@@ -15,15 +15,15 @@ export const Router = () => {
           </BaseLayout>
         }
       />
-        <Route
-            exact
-            path="/Map"
-            element={
-                <BaseLayout>
-                    <HomeMap />
-                </BaseLayout>
-            }
-        />
+      <Route
+        exact
+        path="/Map"
+        element={
+          <BaseLayout>
+            <HomeMap />
+          </BaseLayout>
+        }
+      />
       <Route path="*" element={<h1>TU PÁGINA NO EXISTE CTM</h1>} />
     </Routes>
   );
