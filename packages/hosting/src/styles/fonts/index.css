@@ -1,0 +1,18 @@
+/* latin-ext */
+@font-face {
+  font-family: "SpaceRave-regular";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url(SpaceRave/SpaceRave.ttf) format("ttf"),
+    url(SpaceRave/SpaceRave.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceRave-Italic";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url(SpaceRave/SpaceRave-Italic.ttf) format("ttf"),
+    url(SpaceRave/SpaceRave-Italic.ttf) format("truetype");
+}

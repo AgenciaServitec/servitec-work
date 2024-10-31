@@ -46,8 +46,8 @@ export const theme = {
     font2: "#19191a",
     font3: "#242526",
 
-    success: "#f10404",
-    info: "#fdbf00",
+    success: "#0ECB81",
+    info: "#0795FF",
     warning: "#F5C203",
     error: "rgb(246, 70, 93)",
 
