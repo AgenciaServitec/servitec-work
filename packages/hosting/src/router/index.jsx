@@ -17,7 +17,7 @@ export const Router = () => {
       />
       <Route
         exact
-        path="/Map"
+        path="/"
         element={
           <BaseLayout>
             <HomeMap />
