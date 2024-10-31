@@ -8,7 +8,7 @@ export const Router = () => {
     <Routes>
       <Route
         exact
-        path="/"
+        path="/login"
         element={
           <BaseLayout>
             <LoginIntegration />
@@ -24,7 +24,7 @@ export const Router = () => {
           </BaseLayout>
         }
       />
-      <Route path="*" element={<h1>TU PÁGINA NO EXISTE CTM</h1>} />
+      <Route path="*" element={<h1>TU PÁGINA NO EXISTE</h1>} />
     </Routes>
   );
 };
