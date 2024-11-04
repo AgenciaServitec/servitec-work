@@ -1,50 +1,67 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { useJsApiLoader } from "@react-google-maps/api";
-import { mapOptions } from "./mapComponents/MapConfiguration.jsx";
-import { Map } from "./mapComponents/index.js";
+import { MapScreen } from "./mapComponents/MapScreen.jsx";
+import { FirstScreen } from "./firstScreen/FirstScreen.jsx";
 
 export const HomeMap = () => {
-  const { isLoaded } = useJsApiLoader({
-    id: mapOptions.googleMapApiKey,
-    googleMapsApiKey: mapOptions.googleMapApiKey,
-  });
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMap(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Container>
-      <Map isLoaded={isLoaded} />
-      <DeviceContainer>
-        <Button>
-          <Title>EQUIPOS A REPARAR?</Title>
-        </Button>
-      </DeviceContainer>
-    </Container>
+    <TransitionContainer>
+      <FirstScreenContainer className={!showMap ? "fade-out" : ""}>
+        <FirstScreen />
+      </FirstScreenContainer>
+      <MapScreenContainer className={showMap ? "fade-in" : "fade-out"}>
+        <MapScreen />
+      </MapScreenContainer>
+    </TransitionContainer>
   );
 };
 
-const Container = styled.div`
+const TransitionContainer = styled.div`
   position: relative;
+  max-width: 100%;
+  max-height: 100vh;
+  width: 100%;
+  height: 100vh;
 `;
 
-const DeviceContainer = styled.div`
+const FirstScreenContainer = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 13%;
-  background-color: #040404;
-  top: 87%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+
+  &.fade-out {
+    opacity: 1;
+  }
 `;
-const Button = styled.button`
+
+const MapScreenContainer = styled.div`
   position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 20%;
-  width: 60%;
-  height: 50%;
-  background-color: #fff100;
-  border-radius: 50px;
-`;
-const Title = styled.h1`
-  font-size: 20px;
-  text-align: center;
-  line-height: 23px;
-  font-family: "Space Rave", sans-serif;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  &.fade-out {
+    opacity: 0;
+  }
 `;
