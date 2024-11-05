@@ -30,6 +30,7 @@ export * from "./Form.jsx";
 export * from "./Input.jsx";
 export * from "./InputPassword.jsx";
 export * from "./Title.jsx";
+export * from "./BackButton.jsx";
 
 export { default as Legend } from "./Legend.jsx";
 
