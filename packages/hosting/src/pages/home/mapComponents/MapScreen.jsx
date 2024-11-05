@@ -8,9 +8,10 @@ import { useNavigate } from "react-router";
 export const MapScreen = () => {
   const navigate = useNavigate();
 
-  const onGoToRepairRequest = () => {
-    navigate("/repair-request");
-  };
+  const repairRequestId = "LASNDJASNDKJASNKLANSKDAN";
+
+  const onGoToNextStep = (stepNumber = 1) =>
+    navigate(`/repair-request/${stepNumber}/${repairRequestId}`);
 
   const { isLoaded } = useJsApiLoader({
     id: mapOptions.googleMapApiKey,
@@ -21,7 +22,7 @@ export const MapScreen = () => {
     <Container>
       <Map isLoaded={isLoaded} />
       <DeviceContainer>
-        <Button onClick={onGoToRepairRequest}>
+        <Button onClick={() => onGoToNextStep(1)}>
           <Title>EQUIPOS A REPARAR?</Title>
         </Button>
       </DeviceContainer>
