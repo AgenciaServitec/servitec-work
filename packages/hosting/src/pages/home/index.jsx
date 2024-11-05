@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MapScreen } from "./mapComponents/MapScreen.jsx";
 import { FirstScreen } from "./firstScreen/FirstScreen.jsx";
@@ -9,7 +9,7 @@ export const HomeMap = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowMap(true);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
