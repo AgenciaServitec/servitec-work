@@ -1,7 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import { BaseLayout } from "../components/layouts/BaseLayout.jsx";
-import { LoginIntegration, HomeMap, Issues } from "../pages/index.js";
+import {
+  LoginIntegration,
+  HomeMap,
+  Issues,
+  RepairRequest,
+} from "../pages/index.js";
 
 export const Router = () => {
   return (
@@ -18,10 +23,10 @@ export const Router = () => {
       <Route exact path="/" element={<HomeMap />} />
       <Route
         exact
-        path="/issues"
+        path="/repair-request"
         element={
           <BaseLayout>
-            <Issues />
+            <RepairRequest />
           </BaseLayout>
         }
       />
