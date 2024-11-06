@@ -23,7 +23,13 @@ export const Step1Integration = () => {
         <h2>EQUIPO</h2>
         <input type="text" />
         <h2>DESCRIBA EL PROBLEMA QUE PRESENTA SU EQUIPO</h2>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Describe tu problema"
+        ></textarea>
         <button onClick={onGoToStepNext}>Continuar</button>
       </form>
     </Container>

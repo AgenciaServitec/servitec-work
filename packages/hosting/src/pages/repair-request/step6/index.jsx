@@ -1,28 +1,27 @@
 import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router";
 import { LogoServitec } from "../../../../public/images/index.js";
 import styled from "styled-components";
+import { useNavigate, useParams } from "react-router";
 
-export const Step2Integration = () => {
+export const Step6Integration = () => {
   const { repairRequestId } = useParams();
   const navigate = useNavigate();
 
-  console.log("repairRequestId_2: ", repairRequestId);
+  console.log("repairRequestId_6: ", repairRequestId);
 
   useEffect(() => {
     if (!repairRequestId) return navigate("/");
   }, []);
 
-  const onGoToStepNext = () => navigate(`/repair-request/3/${repairRequestId}`);
+  const onGoToStepNext = () => navigate(`/repair-request/7/${repairRequestId}`);
 
   return (
     <Container>
       <ImgContainer src={LogoServitec} alt=""></ImgContainer>
-      <h1>FOTO DEL EQUIPO</h1>
-      <form action="/subir_imagen" method="POST" encType="multipart/form-data">
-        <input type="file" accept="image/*" />
-        <button onClick={onGoToStepNext}>Continuar</button>
-      </form>
+      <h1>METODO DE PAGO</h1>
+      <button onClick={onGoToStepNext}>TARJETA</button>
+      <button>Efectivo</button>
+      <button>recordar mas tarde</button>
     </Container>
   );
 };
@@ -32,28 +31,20 @@ const Container = styled.div`
   width: 100%;
   height: 92vh;
   background-color: black;
+
   h1 {
     font-size: 30px;
     text-align: center;
+    margin: 3em 0;
     color: #fff100;
     font-family: SpaceRave-Italic;
     font-weight: 400;
     line-height: 35px;
     text-decoration: underline;
   }
-  input {
-    font-family: Abel-regular;
-    font-size: 20px;
-    line-height: 25px;
-    padding: 10px;
-    width: 60%;
-    height: 45px;
-    margin: 5em;
-    display: block;
-    border-radius: 30px;
-  }
+
   button {
-    margin: 19em auto 0 auto;
+    margin: 2em auto;
     display: block;
     font-family: SpaceRave-Italic;
     font-weight: 400;
@@ -61,7 +52,8 @@ const Container = styled.div`
     background-color: #fff100;
     border: none;
     border-radius: 30px;
-    padding: 0.5em 1em;
+    width: 200px;
+    height: 30px;
   }
 `;
 

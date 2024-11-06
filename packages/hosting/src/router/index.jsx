@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import { BaseLayout } from "../components/layouts/BaseLayout.jsx";
 import {
+  Error404,
   HomeMap,
   LoginIntegration,
   Step1Integration,
@@ -9,6 +10,8 @@ import {
   Step3Integration,
   Step4Integration,
   Step5Integration,
+  Step6Integration,
+  Step7Integration,
 } from "../pages/index.js";
 
 export const Router = () => {
@@ -70,15 +73,24 @@ export const Router = () => {
         }
       />
       <Route
-        path="*"
+        exact
+        path="/repair-request/6/:repairRequestId"
         element={
-          <div>
-            <h1>TU PÁGINA NO EXISTE</h1>
-
-            <button>Ir inicio</button>
-          </div>
+          <BaseLayout>
+            <Step6Integration />
+          </BaseLayout>
         }
       />
+      <Route
+        exact
+        path="/repair-request/7/:repairRequestId"
+        element={
+          <BaseLayout>
+            <Step7Integration />
+          </BaseLayout>
+        }
+      />
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };
