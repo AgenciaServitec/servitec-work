@@ -19,7 +19,7 @@ export const Step2Integration = () => {
     <Container>
       <ImgContainer src={LogoServitec} alt=""></ImgContainer>
       <h1>FOTO DEL EQUIPO</h1>
-      <form action="/subir_imagen" method="POST" enctype="multipart/form-data">
+      <form action="/subir_imagen" method="POST" encType="multipart/form-data">
         <input type="file" accept="image/*" />
         <button onClick={onGoToStepNext}>Continuar</button>
       </form>
