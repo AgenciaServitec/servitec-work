@@ -18,12 +18,13 @@ export const Step3Integration = () => {
   return (
     <Container>
       <ImgContainer src={LogoServitec} alt=""></ImgContainer>
-      <h1>CORREO ELECTRÓNICO</h1>
+      <h1>Dirección</h1>
+      <p>Donde te visitamos</p>
       <form action="">
-        <MailInput>
-          <div className="mail-icon"></div>
-          <input type="text" placeholder="example@gmail.com" />
-        </MailInput>
+        <h2>Distrito</h2>
+        <select name="districts" id=""></select>
+        <h2>Direccion</h2>
+        <input type="text" placeholder="" />
         <button onClick={onGoToStepNext}>Continuar</button>
       </form>
     </Container>
@@ -35,6 +36,7 @@ const Container = styled.div`
   width: 100%;
   height: 92vh;
   background-color: black;
+  justify-items: center;
   h1 {
     font-size: 30px;
     text-align: center;
@@ -43,22 +45,40 @@ const Container = styled.div`
     font-weight: 400;
     line-height: 35px;
     text-decoration: underline;
-    margin: 2em 0 2.5em 0;
+    margin: 2em 0 0 0;
   }
-
+  p {
+    text-align: center;
+    font-family: Abel-regular;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff100;
+    margin: 0 0 2.5em 0;
+  }
+  h2 {
+    margin: 0.5em;
+    font-family: SpaceRave-Italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff100;
+    text-align: center;
+  }
+  select,
   input {
     font-family: Abel-regular;
     font-size: 20px;
     line-height: 25px;
     padding: 10px;
-    width: 60%;
+    width: 100%;
     height: 45px;
-    margin: 0 0.5em;
+    margin: 0 auto;
+    display: block;
     border-radius: 30px;
   }
   button {
     top: 10%;
-    margin: 17em auto 0 auto;
+    margin: 7em auto 0 auto;
     display: block;
     font-family: SpaceRave-Italic;
     font-weight: 400;
