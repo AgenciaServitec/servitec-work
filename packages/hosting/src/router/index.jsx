@@ -6,6 +6,9 @@ import {
   LoginIntegration,
   Step1Integration,
   Step2Integration,
+  Step3Integration,
+  Step4Integration,
+  Step5Integration,
 } from "../pages/index.js";
 
 export const Router = () => {
@@ -36,6 +39,33 @@ export const Router = () => {
         element={
           <BaseLayout>
             <Step2Integration />
+          </BaseLayout>
+        }
+      />
+      <Route
+        exact
+        path="/repair-request/3/:repairRequestId"
+        element={
+          <BaseLayout>
+            <Step3Integration />
+          </BaseLayout>
+        }
+      />
+      <Route
+        exact
+        path="/repair-request/4/:repairRequestId"
+        element={
+          <BaseLayout>
+            <Step4Integration />
+          </BaseLayout>
+        }
+      />
+      <Route
+        exact
+        path="/repair-request/5/:repairRequestId"
+        element={
+          <BaseLayout>
+            <Step5Integration />
           </BaseLayout>
         }
       />

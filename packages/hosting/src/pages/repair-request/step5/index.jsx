@@ -1,26 +1,29 @@
 import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router";
 import { LogoServitec } from "../../../../public/images/index.js";
 import styled from "styled-components";
+import { useNavigate, useParams } from "react-router";
 
-export const Step2Integration = () => {
+export const Step5Integration = () => {
   const { repairRequestId } = useParams();
   const navigate = useNavigate();
 
-  console.log("repairRequestId_2: ", repairRequestId);
+  console.log("repairRequestId_5: ", repairRequestId);
 
   useEffect(() => {
     if (!repairRequestId) return navigate("/");
   }, []);
 
-  const onGoToStepNext = () => navigate(`/repair-request/3/${repairRequestId}`);
+  const onGoToStepNext = () => navigate(`/repair-request/6/${repairRequestId}`);
 
   return (
     <Container>
       <ImgContainer src={LogoServitec} alt=""></ImgContainer>
-      <h1>FOTO DEL EQUIPO</h1>
-      <form action="/subir_imagen" method="POST" enctype="multipart/form-data">
-        <input type="file" accept="image/*" />
+      <form action="">
+        <h2>Crear contraseña</h2>
+        <p>6 carácteres o más</p>
+        <input type="text" />
+        <h2>Confirmar contraseña</h2>
+        <input type="text" />
         <button onClick={onGoToStepNext}>Continuar</button>
       </form>
     </Container>
@@ -32,14 +35,22 @@ const Container = styled.div`
   width: 100%;
   height: 92vh;
   background-color: black;
-  h1 {
-    font-size: 30px;
-    text-align: center;
-    color: #fff100;
+  h2 {
+    margin: 1.5em 0 0 0;
     font-family: SpaceRave-Italic;
     font-weight: 400;
-    line-height: 35px;
-    text-decoration: underline;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff100;
+    text-align: center;
+  }
+  p {
+    margin: 0 0 1.5em 0;
+    text-align: center;
+    font-family: Abel-regular;
+    font-weight: 400;
+    font-size: 20px;
+    color: gray;
   }
   input {
     font-family: Abel-regular;
@@ -48,13 +59,13 @@ const Container = styled.div`
     padding: 10px;
     width: 60%;
     height: 45px;
-    margin: auto;
+    margin: 1.5em auto;
     display: block;
     border-radius: 30px;
   }
   button {
     top: 10%;
-    margin: 1em auto;
+    margin: 6em auto;
     display: block;
     font-family: SpaceRave-Italic;
     font-weight: 400;

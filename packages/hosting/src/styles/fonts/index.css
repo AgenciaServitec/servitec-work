@@ -16,3 +16,12 @@
     url(SpaceRave/SpaceRave-Italic.ttf) format("ttf"),
     url(SpaceRave/SpaceRave-Italic.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Abel-regular";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url(Abel/Abel-Regular.ttf) format("ttf"),
+    url(Abel/Abel-Regular.ttf) format("truetype");
+}
