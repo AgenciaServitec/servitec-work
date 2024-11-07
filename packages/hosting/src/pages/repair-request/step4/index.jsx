@@ -15,19 +15,14 @@ export const Step4Integration = () => {
 
   const onGoToStepNext = () => navigate(`/repair-request/5/${repairRequestId}`);
 
+  const onGoToStep6 = () => navigate(`/repair-request/6/${repairRequestId}`);
   return (
     <Container>
       <ImgContainer src={LogoServitec} alt=""></ImgContainer>
-      <h1>CODIGO DE VERIFICACIÓN</h1>
-      <form action="">
-        <p>
-          Introduce el código de 4 digitos que te enviamos a example@gmail.com
-        </p>
-        <ButtonGroup>
-          <button>Reenviar</button>
-          <button onClick={onGoToStepNext}>Continuar</button>
-        </ButtonGroup>
-      </form>
+      <h1>METODO DE PAGO</h1>
+      <button onClick={onGoToStepNext}>TARJETA</button>
+      <button onClick={onGoToStep6}>Efectivo</button>
+      <button onClick={onGoToStep6}>recordar mas tarde</button>
     </Container>
   );
 };
@@ -37,28 +32,20 @@ const Container = styled.div`
   width: 100%;
   height: 92vh;
   background-color: black;
+
   h1 {
     font-size: 30px;
     text-align: center;
+    margin: 3em 0;
     color: #fff100;
     font-family: SpaceRave-Italic;
     font-weight: 400;
     line-height: 35px;
     text-decoration: underline;
-    margin-bottom: 1em;
   }
-  p {
-    text-align: center;
-    font-family: Abel-regular;
-    font-weight: 400;
-    font-size: 25px;
-    color: gray;
-    margin: auto 2.2em;
-    display: block;
-  }
+
   button {
-    top: 10%;
-    margin: 1em auto;
+    margin: 2em auto;
     display: block;
     font-family: SpaceRave-Italic;
     font-weight: 400;
@@ -66,7 +53,8 @@ const Container = styled.div`
     background-color: #fff100;
     border: none;
     border-radius: 30px;
-    padding: 0.5em 1em;
+    width: 200px;
+    height: 30px;
   }
 `;
 
@@ -74,9 +62,4 @@ const ImgContainer = styled.img`
   margin: auto;
   display: block;
   padding: 1em;
-`;
-
-const ButtonGroup = styled.div`
-  margin: 3em;
-  display: flex;
 `;
